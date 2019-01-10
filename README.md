@@ -23,7 +23,7 @@ import (
 func main() {
 	logger.Init(
 		"testlog",                            // 日志文件名前缀
-		".",                                  // 日志保存目录
+		"./log",                              // 日志保存目录，必须是单独一个目录
 		1024*1024,                            // 文件最大尺寸，单位字节
 		3,                                    // 日志保留最大天数
 		logger.DEBUG_LEVEL,                   // 日志级别
@@ -43,3 +43,5 @@ func main() {
 [Error][2019-01-06 11:33:21.0314][src/main.go:19][main]This a ERROR test log.
 [Fatal][2019-01-06 11:33:21.0317][src/main.go:20][main]This a Fatal test log.
 ```
+## 注意事项
+由于只会保留maxDays天数的日志，之前的日志将会删除，所以**日志保存的目录必须是单独一个目录**，否则会误删其他文件。
