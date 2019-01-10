@@ -1,5 +1,8 @@
-# tinylog
+## tinylog
 Tiny logging package for Golang
+
+## install
+go get github.com/idakun/tinylog
 
 ## 基本功能
 * 按天生成文件
